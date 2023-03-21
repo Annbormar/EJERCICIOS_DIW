@@ -24,3 +24,85 @@ body{
     text-decoration: none;
     font-weight: 700;
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: beige;
+    opacity: 0;
+    transition: opacity 1s 1.5s;
+    pointer-events: none;
+    display: flex;
+}
+
+.modal:target{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.modal_img{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.modal__title{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.modal__paragraph{
+    line-height: 1.7rem;
+}
+
+.modal__container{
+    background-color: white;
+    width: 70%;
+    padding: 40px 10px;
+    margin: auto;
+    max-width: 1200px;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    position: relative;
+
+}
+/* BOTON CIERRE */
+.modal__close{
+    background-color: darkred;
+    border-radius: 50%;
+    color: white;
+    font-weight: 700;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.modal:target .modal__container{
+    animation: showModal 2s 1.5s;
+}
+
+/* Animación */
+
+@keyframes showModal{
+
+    0%{
+        transform: translateY(-200%) rotate(10deg);
+    }
+
+    50%{
+        transform: translateY(0) rotate(-10deg);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
