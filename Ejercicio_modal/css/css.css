@@ -70,6 +70,9 @@ body{
 
     position: relative;
 
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    transition: clip-path 1s;
+
 }
 /* BOTON CIERRE */
 .modal__close{
@@ -88,6 +91,7 @@ body{
 }
 .modal:target .modal__container{
     animation: showModal 2s 1.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 /* Animación */
