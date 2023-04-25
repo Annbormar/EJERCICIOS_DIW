@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap');
+
+/* @font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'PT Sans', sans-serif;
+    src: url('../fonts/PTSans-Regular.ttf');
+} */
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* 1rem sera 10px */
+
+}
+
+*,
+*::before,
+*::after {
+    /*hereda */
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/* globales */
+.container {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'PT sans', sans-serif;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.btn {
+    color: #fff;
+    display: block;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 2rem 0;
+    padding: 1rem 3rem;
+    flex: 0 0 100%;
+
+
+}
+
+.btn-primary {
+    background-color: #000;
+}
+
+.btn-secondary {
+    background-color: #990012;
+}
+@media screen and (min-width: 768px){
+    .btn{
+        display: inline-block;
+        flex:0 0 auto;
+        
+    }
+    
+}
+
+/* UTILIDADES */
+.no-margin {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Grid propio */
+@media screen and (min-width: 768px ){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .column-center{
+        justify-content: center;
+    }
+    .columns-12{
+        flex: 0 0 100%;
+    }
+    .columns-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columns-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columns-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .columns-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .columns-3{
+        flex: 0 0 calc(25% - 1rem);
+    }
+    .columns-2{
+        flex: 0 0 calc(12.5% - 1rem);
+    }
+    
+}
+
+/* CABECERA */
+.header {
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+
+}
+
+.header a,
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header h1,
+.footer h1 {
+    color: #fff;
+    font-weight: 400;
+    /* text-align: center; */
+
+}
+
+.header h1 span,
+.footer h1 span {
+    color: #fff;
+    font-weight: 700;
+
+}
+
+/* navegacion */
+.navigation a {
+    text-align: center;
+    font-size: 1.8rem;
+    display: block;
+}
+
+.tagline {
+    color: #fff;
+    margin-top: 5rem;
+}
+/* ESTILOS FORMULARIO */
+.contact-form{
+    background-color: #fff;
+    margin-top: 5rem;
+ 
+}
+@media screen and (min-width: 768px ){
+ .contact-form{
+    padding: 5rem;
+    margin-top: -10rem;
+ }
+    
+}
+.field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.contact-form .field label{
+    flex: 0 0 8rem;
+}
+.contact-form .field input:not([type="submit"]), .contact-form .field textarea {
+    border: 1px solid #e1e1e1;
+    flex:1;
+    padding: 1rem;
+}
+.contact-form .field textarea{
+    height: 20rem;
+}
+.contact-form .submit{
+    justify-content: flex-end;
+
+}
+
+/*ESTILOS FOOTER */
+.footer {
+    background-color: black;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socials a {
+    font-size: 2.4rem;
+
+}
+
+/* otra forma de añadir iconos de FAWSM */
+.socials a::before {
+    font-family: 'Font Awesome 5 Brands';
+}
+
+.socials a[href*='facebook']::before {
+    content: "\f39e";
+}
+
+/* blog y catas */
+.main-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+}
+
+.blog,
+.courses {
+    /* border: 2px solid red; */
+    flex: 0 0 100%;
+}
+
+
+/* 
+.courses{ otra forma de cambiar el orden 
+    order: -1;
+} */
+
+/* aside */
+
+/* SEPARACIONES POSTS */
+.post{
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e1e1e1;
+}
+.post:last-of-type{
+    border: none;
+}
+.coursees-list{
+    padding: 0;
+    list-style: none;
+    
+}
+.course{
+    border-bottom: 1px solid #e1e1e1;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+.course:last-of-type{
+    border: none;
+}
+.course p{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.course p span{
+    font-weight: 400;
+}
+.course p.description{
+    font-weight: 400;
+}
+
+/* mediaquery cabecera */
+@media screen and (min-width: 768px) {
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navigation a {
+        display: inline;
+        margin-right: 2rem;
+    }
+
+    .navigation a:last-of-type {
+        margin: 0;
+    }
+
+    .tagline {
+        margin-top: 15rem;
+    }
+
+    .tagline p {
+        font-size: 2.2rem;
+    }
+
+    /* main */
+    .main-content {
+        justify-content: space-between;
+        /* gap: 2rem; */
+    }
+
+    .blog {
+        flex: 0 0 66%;
+    }
+
+    .courses {
+        flex: 0 0 calc(33% - 4rem);
+        /* flex: 0 0 33%; */
+        /* order: 1; */
+    }
+
+}
+/* contacto */
+
