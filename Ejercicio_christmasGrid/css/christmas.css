@@ -180,3 +180,37 @@ img {
         grid-column: 2/4;
     }
 }
+
+/*HOLIDAY*/
+.holiday{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.text-holiday{
+    background-color: var(--white);
+    padding: 0 5rem 2.5rem 5rem;
+}
+h2{
+    text-align: center;
+}
+
+
+
+
+
+/*FOOTER*/
+
+.footer-img{
+    background-image: url(../img/footer_bg.jpg);
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.text-footer{
+    background-color: black;
+    text-align: center;
+    color: var(--white);
+}
