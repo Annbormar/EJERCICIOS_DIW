@@ -5,7 +5,7 @@
 
 :root {
     --white: #ffff;
-    --black: #0000;
+    --black: #000000;
     --grey: #343a40;
 
     --mainFont: 'Mountains of Christmas';
@@ -296,9 +296,18 @@ img {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .text-footer {
-    background-color: black;
+    background-color: var(--black);
     color: var(--white);
+}
+
+.footer a{
+    color: var(--white);
+    font-size: 2rem;
 }
