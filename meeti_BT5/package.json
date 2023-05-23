@@ -1,0 +1,21 @@
+{
+  "name": "meeti_bt5",
+  "version": "1.0.0",
+  "description": "Meeti BS5 Sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compilar":"sass --watch src/scss:build/css"
+  },
+  "keywords": [
+    "Bootstrap",
+    "5",
+    "Sass"
+  ],
+  "author": "Susana",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap": "^5.2.3",
+    "sass": "^1.62.1"
+  }
+}
